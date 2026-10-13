@@ -79,14 +79,14 @@ Desenvolvido como parte das atividades acadêmicas do curso de ADS. 🌿
 
 index.html
 
-![Imagem de avaliação de semântica do index.html](./index.png)
+![Imagem de avaliação de semântica do index.html](./imgs/index.png)
 
 projetos.html
 
-![Imagem de avaliação de semântica do projetos.html](./projetos.png)
+![Imagem de avaliação de semântica do projetos.html](./imgs/projetos.png)
 
 cadastro.html
 
-![Imagem de avaliação de semântica do projetos.html](./cadastro.png)
+![Imagem de avaliação de semântica do projetos.html](./imgs/cadastro.png)
 
 

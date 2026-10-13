@@ -9,7 +9,25 @@
 </head>
 <body>
     <div id="panel" class="active">
-        <aside id="aside-menu-desktop">aside</aside>
+        <aside id="aside-menu-desktop">
+            <div class="header">header</div>
+            <div class="content">
+                <ul class="aside-nav">
+                    <li>
+                        <a href="painel.html" class="aside-nav-link active" title="Visão geral">
+                            <img src="/imgs/logo.svg" alt="" width="25px" height="25">
+                            <span>Visão geral</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="painel.projetos.html" class="aside-nav-link" title="Projetos">
+                            <img src="/imgs/logo.svg" alt="" width="25px" height="25">
+                            <span>Projetos</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
         <aside id="aside-menu-mobile">aside</aside>
         <div id="content">
             <header id="header-panel">
@@ -26,11 +44,66 @@
             </header>
             <main id="main-panel">
                 <div class="container">
-                    <div style="height: 2000px; background-color: green;">as</div>
+                    <section class="panel_head">
+                        <h1>Visão geral</h1>
+                    </section>
+                    <section class="general_info">
+                        <div class="card_panel">
+                            <h5>Voluntários</h5>
+                            <span class="value">00</span>
+                        </div>
+                        <div class="card_panel">
+                            <h5>Projetos ativos</h5>
+                            <span class="value">00</span>
+                        </div>
+                        <div class="card_panel">
+                            <h5>Doações</h5>
+                            <span class="value">R$ 0,00</span>
+                        </div>
+                        <div class="card_panel">
+                            <h5>Pendências</h5>
+                            <span class="value">00</span>
+                        </div>
+                    </section>
+                    <section class="table card_panel">
+                        <h5>ÚLTIMOS CADASTROS</h5>
+                        <table border>
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>E-mail</th>
+                                    <th>Cidade</th>
+                                    <th>Status</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>John Doe</td>
+                                    <td>johndoe@email.com</td>
+                                    <td>chiqui chiqui - BA</td>
+                                    <td>Dormindo</td>
+                                    <td>
+                                        [<a href="">Ver</a>][<a href="">Editar</a>][<a href="">Deletar</a>]
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>E-mail</th>
+                                    <th>Cidade</th>
+                                    <th>Status</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </section>
                 </div>
             </main>
             <footer id="footer-panel">footer</footer>
         </div>
     </div>
+    <script src="/js/panel.js"></script>
 </body>
 </html>
