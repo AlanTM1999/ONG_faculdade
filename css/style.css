@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "./variables.css";
 
 *,
 *::after,
@@ -8,38 +9,19 @@
     box-sizing: border-box;
 }
 
-:root{
-    --spacing: 8px;
-    --spacing-2: 16px;
-    --spacing-3: 32px;
-
-    --surface: #E8EEF3;
-    --surface-2: #333333;
-    --surface-3: #2F7D5B;
-    --surface-4: #1F2A44;
-    --surface-5: #F2B632;
-    --surface-6: #E2A51F;
-    --surface-7: #FAFAF7;
-    --surface-8: 0, 0, 0;
-
-    --text-1: #333333;
-}
-
-
-
 html{
-    color: var(--surface-2);
-    font-family: "Roboto Mono";
-    background-color: var(--surface-7);
+    color: rgb(var(--color-2));
+    font-family: "Inter", sans-serif;
+    background-color: rgb(var(--color-7));
 }
 
 a{
-    color: var(--surface-3)
+    color: rgb(var(--color-3))
 }
 
 h1.title-page{
     font-size: 50px;
-    margin-bottom: var(--spacing-3);
+    margin-bottom: var(--spacing-4);
 }
 
 .btn{
@@ -58,12 +40,12 @@ h1.title-page{
 }
 
 .btn-warning{
-    background-color: var(--surface-5);
-    color: var(--surface-2)
+    background-color: rgb(var(--color-5));
+    color: rgb(var(--color-2))
 }
 
 .btn-warning:hover{
-    background-color: var(--surface-6);
+    background-color: rgb(var(--color-6));
 }
 
 .btn:disabled{
@@ -84,11 +66,11 @@ h1.title-page{
 ============ MAIN SECTIONS ============
 */
 .main_section{
-    padding-top: var(--spacing-3);
+    padding-top: var(--spacing-4);
 }
 
 .main_section_bottom{
-    padding: var(--spacing-3) 0;
+    padding: var(--spacing-4) 0;
 }
 
 .main_section_title{
@@ -121,19 +103,19 @@ HERO BANNER
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(var(--surface-8), 0.5);
+    background-color: rgba(var(--color-8), 0.5);
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 #hero .overlay h1{
-    color: var(--surface);
+    color: rgb(var(--color));
     text-align: center;
 }
 
 #hero .overlay p{
-    color: var(--surface-7);
+    color: rgb(var(--color-7));
     text-align: center;
 }
 
@@ -145,14 +127,14 @@ HERO BANNER
     top: 0px;
     left: 0;
     right: 0;
-    background-color: var(--surface);
+    background-color: rgb(var(--color));
     padding: var(--spacing) 0;
     display: flex;
     min-height: 65px;
     flex-direction: column;
     justify-content: center;
     z-index: 100000;
-    border-bottom: 1px solid var(--surface-3);
+    border-bottom: 1px solid rgb(var(--color-3));
 }
 
 #header-page #container-navigation{
@@ -186,7 +168,7 @@ HERO BANNER
     display: block;
     position: fixed;
     height: 100dvh;
-    background-color: var(--surface);
+    background-color: rgb(var(--color));
     top: 0;
     right: 0;
     bottom: 0;
@@ -196,13 +178,13 @@ HERO BANNER
     transition: .3s;
     padding-top: 65px;
     z-index: 3000;
-    border-left: 1px solid var(--surface-3);
+    border-left: 1px solid rgb(var(--color-3));
 }
 
 #header-page #container-navigation #navigation-desktop .desk_nav-link,
 #header-page #container-navigation #navigation-mobile .mob_nav-link{
     text-decoration: none;
-    color: var(--text-1);
+    color: rgb(var(--color-2));
     font-weight: 600;
 }
 
@@ -219,8 +201,8 @@ HERO BANNER
 
 #header-page #container-navigation #navigation-mobile .mob_nav-link.active,
 #header-page #container-navigation #navigation-mobile .mob_nav-link:hover{
-    background-color: var(--surface-3);
-    color: var(--surface);
+    background-color: rgb(var(--color-3));
+    color: rgb(var(--color));
 }
 
 #header-page #container-navigation #navigation-mobile.active{
@@ -248,7 +230,7 @@ HERO BANNER
     position: absolute;
     height: 2px;
     width: 25px;
-    background-color: var(--surface-2);
+    background-color: rgb(var(--color-2));
     transform: translateX(-50%);
     left: 50%;
     transition: .3s;
@@ -305,7 +287,7 @@ HERO BANNER
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(var(--surface-8), 0.4);
+    background-color: rgba(var(--color-8), 0.4);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -313,16 +295,16 @@ HERO BANNER
 
 #carrousel_1 .carrousel_1_item .carrousel_info h1,
 #carrousel_1 .carrousel_1_item .carrousel_info span.h1{
-    color: var(--surface);
+    color: rgb(var(--color));
     font-size: 40px;
     text-align: center;
-    margin-bottom: var(--spacing-3);
+    margin-bottom: var(--spacing-4);
     display: block;
     font-weight: bold;
 }
 
 #carrousel_1 .carrousel_1_item .carrousel_info p{
-    color: var(--surface-7);
+    color: rgb(var(--color-7));
     font-size: 15px;
     width: 100%;
     max-width: 600px;
@@ -338,7 +320,7 @@ HERO BANNER
 .contact_section,
 .about-us_section,
 .voluntary_section{
-    background-color: var(--surface);
+    background-color: rgb(var(--color));
 }
 
 .box-grid{
@@ -348,12 +330,12 @@ HERO BANNER
 }
 
 .box-grid .info_box{
-    border-left: 4px solid var(--surface-3);
-    padding: var(--spacing-3) var(--spacing-2);
+    border-left: 4px solid rgb(var(--color-3));
+    padding: var(--spacing-4) var(--spacing-2);
 }
 
 .box-grid .info_box .info_box_q{
-    color: var(--surface-3);
+    color: rgb(var(--color-3));
     font-weight: 700;
     font-size: 30px;
     display: block;
@@ -370,10 +352,10 @@ HERO BANNER
 ============ SECTION MISSION =============
 */
 .text-mission{
-    background-color: var(--surface);
-    color: var(--surface-3);
-    border-left: 4px solid var(--surface-3);
-    padding: var(--spacing-3) var(--spacing-2);
+    background-color: rgb(var(--color));
+    color: rgb(var(--color-3));
+    border-left: 4px solid rgb(var(--color-3));
+    padding: var(--spacing-4) var(--spacing-2);
     font-size: 20px;
 }
 
@@ -385,7 +367,7 @@ HERO BANNER
 }
 
 .contact_list > *:not(:last-child){
-    margin-bottom: var(--spacing-3);
+    margin-bottom: var(--spacing-4);
 }
 
 /**
@@ -394,7 +376,7 @@ VOLUNTARY
 ===========================================
 */
 .voluntary > p{
-    margin-bottom: var(--spacing-3) !important;
+    margin-bottom: var(--spacing-4) !important;
 }
 
 .voluntary > *:not(:last-child){
@@ -402,7 +384,7 @@ VOLUNTARY
 }
 
 .voluntary > ul{
-    padding-left: var(--spacing-3);
+    padding-left: var(--spacing-4);
 }
 
 .voluntary > ul *:not(:last-child){
@@ -414,22 +396,22 @@ VOLUNTARY
 FOOTER
 ===========================================
 */
-footer{
-    padding: var(--spacing-3) 0;
-    background-color: var(--surface-4);
-    color: var(--surface);
+footer.site-footer{
+    padding: var(--spacing-4) 0;
+    background-color: rgb(var(--color-4));
+    color: rgb(var(--color));
 }
 
-footer a{
-    color: var(--surface-5);
+footer.site-footer a{
+    color: rgb(var(--color-5));
 }
 
-footer .container > *:not(:last-child){
+footer.site-footer .container > *:not(:last-child){
     margin-bottom: var(--spacing);
 }
 
-footer .container > h2{
-    margin-bottom: var(--spacing-3) !important;
+footer.site-footer .container > h2{
+    margin-bottom: var(--spacing-4) !important;
 }
 
 /**
@@ -443,12 +425,12 @@ FORM REGISTER
 }
 
 #form-register > *:not(:last-child){
-    margin-bottom: var(--spacing-3);
+    margin-bottom: var(--spacing-4);
 }
 
 #form-register fieldset{
     background-color: white;
-    border-color: var(--surface-3);
+    border-color: rgb(var(--color-3));
     padding: var(--spacing-2);
     border-radius: var(--spacing-2);
 }
@@ -471,7 +453,7 @@ FORM REGISTER
     width: 100%;
     padding: var(--spacing-2);
     border-radius: var(--spacing);
-    border: 1px solid var(--surface-3);
+    border: 1px solid rgb(var(--color-3));
     margin-top: var(--spacing);
     background-color: white;
     outline: none;
