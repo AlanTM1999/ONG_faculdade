@@ -1,109 +1,311 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Painel — Raiz Viva</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/panel.style.css">
 </head>
 <body>
-    <div id="panel" class="active">
-        <aside id="aside-menu-desktop">
-            <div class="header">header</div>
-            <div class="content">
-                <ul class="aside-nav">
-                    <li>
-                        <a href="painel.html" class="aside-nav-link active" title="Visão geral">
-                            <img src="/imgs/logo.svg" alt="" width="25px" height="25">
-                            <span>Visão geral</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="painel.projetos.html" class="aside-nav-link" title="Projetos">
-                            <img src="/imgs/logo.svg" alt="" width="25px" height="25">
-                            <span>Projetos</span>
-                        </a>
-                    </li>
-                </ul>
+<div id="panel">
+
+    <!-- =============================================
+         ASIDE DESKTOP
+         ============================================= -->
+    <aside id="aside-menu-desktop" aria-label="Menu do painel">
+
+        <div class="aside-header">
+            <div class="aside-logo" aria-hidden="true">
+                <!-- Ícone: folha / raiz -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M12 22V12"/>
+                    <path d="M12 12C12 7 7 4 2 5c0 5 3 9 10 7"/>
+                    <path d="M12 12c0-5 5-8 10-7-1 5-4 9-10 7"/>
+                </svg>
             </div>
-        </aside>
-        <aside id="aside-menu-mobile">aside</aside>
-        <div id="content">
-            <header id="header-panel">
-                <button type="button" id="toggle-desktop" class="active">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+            <div class="aside-title">
+                <strong>Raiz Viva</strong>
+                <small>Painel Admin</small>
+            </div>
+        </div>
+
+        <div class="aside-content">
+            <span class="aside-section-label">Menu</span>
+            <ul class="aside-nav">
+                <li>
+                    <a href="painel.html" class="aside-nav-link active" title="Visão geral">
+                        <span class="nav-icon" aria-hidden="true">
+                            <!-- Dashboard / grid -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="7" height="7" rx="1"/>
+                                <rect x="14" y="3" width="7" height="7" rx="1"/>
+                                <rect x="3" y="14" width="7" height="7" rx="1"/>
+                                <rect x="14" y="14" width="7" height="7" rx="1"/>
+                            </svg>
+                        </span>
+                        <span class="nav-label">Visão geral</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="painel.voluntarios.html" class="aside-nav-link" title="Voluntários">
+                        <span class="nav-icon" aria-hidden="true">
+                            <!-- Pessoas / voluntários -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="9" cy="7" r="3"/>
+                                <path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                <path d="M21 21v-2a4 4 0 0 0-3-3.85"/>
+                            </svg>
+                        </span>
+                        <span class="nav-label">Voluntários</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="painel.projetos.html" class="aside-nav-link" title="Projetos">
+                        <span class="nav-icon" aria-hidden="true">
+                            <!-- Clipboard / projetos -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+                                <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+                                <line x1="9" y1="12" x2="15" y2="12"/>
+                                <line x1="9" y1="16" x2="13" y2="16"/>
+                            </svg>
+                        </span>
+                        <span class="nav-label">Projetos</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="aside-footer">
+            <a href="index.html" class="aside-footer-link" title="Voltar ao site">
+                <span class="nav-icon" aria-hidden="true">
+                    <!-- Seta esquerda / voltar ao site -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M15 18l-6-6 6-6"/>
+                    </svg>
+                </span>
+                <span>Voltar ao site</span>
+            </a>
+        </div>
+
+    </aside>
+
+    <!-- =============================================
+         ASIDE MOBILE (clonado via JS)
+         ============================================= -->
+    <aside id="aside-menu-mobile" aria-label="Menu do painel (mobile)"></aside>
+
+    <!-- =============================================
+         CONTENT
+         ============================================= -->
+    <div id="content">
+
+        <header id="header-panel">
+            <div class="header-panel-left">
+                <button type="button" id="toggle-desktop" class="panel-toggle-btn" aria-label="Expandir/recolher menu">
+                    <span></span><span></span><span></span>
                 </button>
-                <button type="button" id="toggle-mobile">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <button type="button" id="toggle-mobile" class="panel-toggle-btn" aria-label="Abrir menu">
+                    <span></span><span></span><span></span>
                 </button>
-            </header>
-            <main id="main-panel">
-                <div class="container">
-                    <section class="panel_head">
+                <nav class="header-panel-breadcrumb" aria-label="Localização">
+                    Painel / <span>Visão geral</span>
+                </nav>
+            </div>
+            <div class="header-panel-right">
+                <div class="panel-user-avatar" title="Administrador" aria-label="Usuário: Administrador">AD</div>
+            </div>
+        </header>
+
+        <main id="main-panel">
+            <div class="container">
+
+                <!-- HEAD -->
+                <section class="panel_head">
+                    <div>
                         <h1>Visão geral</h1>
-                    </section>
-                    <section class="general_info">
-                        <div class="card_panel">
-                            <h5>Voluntários</h5>
-                            <span class="value">00</span>
+                        <p>Resumo da atividade mais recente do instituto.</p>
+                    </div>
+                </section>
+
+                <!-- MÉTRICAS -->
+                <section class="general_info" aria-label="Métricas">
+
+                    <div class="metric-card">
+                        <div class="metric-card-top">
+                            <span class="metric-card-label">Voluntários</span>
+                            <span class="metric-card-icon green" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="9" cy="7" r="3"/>
+                                    <path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                    <path d="M21 21v-2a4 4 0 0 0-3-3.85"/>
+                                </svg>
+                            </span>
                         </div>
-                        <div class="card_panel">
-                            <h5>Projetos ativos</h5>
-                            <span class="value">00</span>
+                        <span class="metric-card-value">65</span>
+                        <span class="metric-card-sub">+4 este mês</span>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-card-top">
+                            <span class="metric-card-label">Projetos ativos</span>
+                            <span class="metric-card-icon blue" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+                                    <rect x="8" y="2" width="8" height="4" rx="1"/>
+                                    <line x1="9" y1="12" x2="15" y2="12"/>
+                                    <line x1="9" y1="16" x2="13" y2="16"/>
+                                </svg>
+                            </span>
                         </div>
-                        <div class="card_panel">
-                            <h5>Doações</h5>
-                            <span class="value">R$ 0,00</span>
+                        <span class="metric-card-value">3</span>
+                        <span class="metric-card-sub">Horta, Reforço, Cesta</span>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-card-top">
+                            <span class="metric-card-label">Doações (mês)</span>
+                            <span class="metric-card-icon yellow" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="12" y1="1" x2="12" y2="23"/>
+                                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                                </svg>
+                            </span>
                         </div>
-                        <div class="card_panel">
-                            <h5>Pendências</h5>
-                            <span class="value">00</span>
+                        <span class="metric-card-value">R$ 4.200</span>
+                        <span class="metric-card-sub">+12% vs. mês anterior</span>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-card-top">
+                            <span class="metric-card-label">Pendências</span>
+                            <span class="metric-card-icon red" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <line x1="12" y1="8" x2="12" y2="12"/>
+                                    <line x1="12" y1="16" x2="12.01" y2="16"/>
+                                </svg>
+                            </span>
                         </div>
-                    </section>
-                    <section class="table card_panel">
-                        <h5>ÚLTIMOS CADASTROS</h5>
-                        <table border>
+                        <span class="metric-card-value">7</span>
+                        <span class="metric-card-sub">Cadastros aguardando aprovação</span>
+                    </div>
+
+                </section>
+
+                <!-- TABELA DE ÚLTIMOS CADASTROS -->
+                <section class="table-card" aria-labelledby="table-title">
+                    <div class="table-card-header">
+                        <span class="table-card-title" id="table-title">Últimos cadastros</span>
+                        <a href="painel.voluntarios.html" class="table-card-link">Ver todos →</a>
+                    </div>
+                    <div class="table-wrapper">
+                        <table>
                             <thead>
                                 <tr>
-                                    <th>Nome</th>
-                                    <th>E-mail</th>
-                                    <th>Cidade</th>
-                                    <th>Status</th>
-                                    <th>Ações</th>
+                                    <th scope="col">Nome</th>
+                                    <th scope="col">E-mail</th>
+                                    <th scope="col">Cidade</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Ações</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>John Doe</td>
-                                    <td>johndoe@email.com</td>
-                                    <td>chiqui chiqui - BA</td>
-                                    <td>Dormindo</td>
+                                    <td>Maria da Silva</td>
+                                    <td>maria@email.com</td>
+                                    <td>São Paulo — SP</td>
+                                    <td><span class="badge badge-active">Ativo</span></td>
                                     <td>
-                                        [<a href="">Ver</a>][<a href="">Editar</a>][<a href="">Deletar</a>]
+                                        <div class="table-actions">
+                                            <a href="#" class="table-action-btn view" title="Ver">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                                            </a>
+                                            <a href="#" class="table-action-btn edit" title="Editar">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                                            </a>
+                                            <a href="#" class="table-action-btn delete" title="Remover">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>João Pereira</td>
+                                    <td>joao.p@email.com</td>
+                                    <td>Campinas — SP</td>
+                                    <td><span class="badge badge-pending">Pendente</span></td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <a href="#" class="table-action-btn view" title="Ver">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                                            </a>
+                                            <a href="#" class="table-action-btn edit" title="Editar">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                                            </a>
+                                            <a href="#" class="table-action-btn delete" title="Remover">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Ana Souza</td>
+                                    <td>ana.souza@email.com</td>
+                                    <td>Guarulhos — SP</td>
+                                    <td><span class="badge badge-active">Ativo</span></td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <a href="#" class="table-action-btn view" title="Ver">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                                            </a>
+                                            <a href="#" class="table-action-btn edit" title="Editar">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                                            </a>
+                                            <a href="#" class="table-action-btn delete" title="Remover">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Carlos Lima</td>
+                                    <td>carlos.l@email.com</td>
+                                    <td>São Paulo — SP</td>
+                                    <td><span class="badge badge-inactive">Inativo</span></td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <a href="#" class="table-action-btn view" title="Ver">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                                            </a>
+                                            <a href="#" class="table-action-btn edit" title="Editar">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                                            </a>
+                                            <a href="#" class="table-action-btn delete" title="Remover">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>
+                                            </a>
+                                        </div>
                                     </td>
                                 </tr>
                             </tbody>
-                            <tfoot>
-                                <tr>
-                                    <th>Nome</th>
-                                    <th>E-mail</th>
-                                    <th>Cidade</th>
-                                    <th>Status</th>
-                                    <th>Ações</th>
-                                </tr>
-                            </tfoot>
                         </table>
-                    </section>
-                </div>
-            </main>
-            <footer id="footer-panel">footer</footer>
-        </div>
-    </div>
-    <script src="/js/panel.js"></script>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+
+        <footer id="footer-panel">
+            <span>&copy; 2026 Instituto Raiz Viva</span>
+            <a href="index.html">Voltar ao site</a>
+        </footer>
+
+    </div><!-- #content -->
+</div><!-- #panel -->
+
+<script src="/js/panel.js"></script>
 </body>
 </html>

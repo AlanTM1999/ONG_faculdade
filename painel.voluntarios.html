@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voluntários — Painel Raiz Viva</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/panel.style.css">
+</head>
+<body>
+<div id="panel">
+
+    <!-- =============================================
+         ASIDE DESKTOP
+         ============================================= -->
+    <aside id="aside-menu-desktop" aria-label="Menu do painel">
+
+        <div class="aside-header">
+            <div class="aside-logo" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22V12"/>
+                    <path d="M12 12C12 7 7 4 2 5c0 5 3 9 10 7"/>
+                    <path d="M12 12c0-5 5-8 10-7-1 5-4 9-10 7"/>
+                </svg>
+            </div>
+            <div class="aside-title">
+                <strong>Raiz Viva</strong>
+                <small>Painel Admin</small>
+            </div>
+        </div>
+
+        <div class="aside-content">
+            <span class="aside-section-label">Menu</span>
+            <ul class="aside-nav">
+                <li>
+                    <a href="painel.html" class="aside-nav-link" title="Visão geral">
+                        <span class="nav-icon" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="7" height="7" rx="1"/>
+                                <rect x="14" y="3" width="7" height="7" rx="1"/>
+                                <rect x="3" y="14" width="7" height="7" rx="1"/>
+                                <rect x="14" y="14" width="7" height="7" rx="1"/>
+                            </svg>
+                        </span>
+                        <span class="nav-label">Visão geral</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="painel.voluntarios.html" class="aside-nav-link active" title="Voluntários">
+                        <span class="nav-icon" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="9" cy="7" r="3"/>
+                                <path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                <path d="M21 21v-2a4 4 0 0 0-3-3.85"/>
+                            </svg>
+                        </span>
+                        <span class="nav-label">Voluntários</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="painel.projetos.html" class="aside-nav-link" title="Projetos">
+                        <span class="nav-icon" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+                                <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+                                <line x1="9" y1="12" x2="15" y2="12"/>
+                                <line x1="9" y1="16" x2="13" y2="16"/>
+                            </svg>
+                        </span>
+                        <span class="nav-label">Projetos</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="aside-footer">
+            <a href="index.html" class="aside-footer-link" title="Voltar ao site">
+                <span class="nav-icon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M15 18l-6-6 6-6"/>
+                    </svg>
+                </span>
+                <span>Voltar ao site</span>
+            </a>
+        </div>
+
+    </aside>
+
+    <!-- ASIDE MOBILE -->
+    <aside id="aside-menu-mobile" aria-label="Menu do painel (mobile)"></aside>
+
+    <!-- =============================================
+         CONTENT
+         ============================================= -->
+    <div id="content">
+
+        <header id="header-panel">
+            <div class="header-panel-left">
+                <button type="button" id="toggle-desktop" class="panel-toggle-btn" aria-label="Expandir/recolher menu">
+                    <span></span><span></span><span></span>
+                </button>
+                <button type="button" id="toggle-mobile" class="panel-toggle-btn" aria-label="Abrir menu">
+                    <span></span><span></span><span></span>
+                </button>
+                <nav class="header-panel-breadcrumb" aria-label="Localização">
+                    Painel / <span>Voluntários</span>
+                </nav>
+            </div>
+            <div class="header-panel-right">
+                <div class="panel-user-avatar" title="Administrador">AD</div>
+            </div>
+        </header>
+
+        <main id="main-panel">
+            <div class="container">
+
+                <!-- HEAD -->
+                <section class="panel_head">
+                    <div>
+                        <h1>Voluntários</h1>
+                        <p>Gerencie todos os cadastros recebidos pelo site.</p>
+                    </div>
+                    <div class="panel_head-actions">
+                        <a href="cadastro.html" class="btn btn-warning" style="font-size:0.85rem; padding: 8px 18px; border-radius: 8px;">
+                            + Novo cadastro
+                        </a>
+                    </div>
+                </section>
+
+                <!-- FILTROS -->
+                <section class="card_panel" aria-label="Filtros">
+                    <div style="display:flex; gap: var(--spacing-2); flex-wrap: wrap; align-items: center;">
+                        <label style="font-size:0.85rem; font-weight:600; color: rgba(var(--color-2), 0.6);" for="filter-status">Filtrar por status:</label>
+                        <select id="filter-status" style="padding: 6px 12px; border-radius: 8px; border: 1.5px solid rgba(var(--color-2), 0.15); font-size: 0.85rem; background-color: rgb(var(--color-7)); outline: none;">
+                            <option value="">Todos</option>
+                            <option value="ativo">Ativo</option>
+                            <option value="pendente">Pendente</option>
+                            <option value="inativo">Inativo</option>
+                        </select>
+                        <label style="font-size:0.85rem; font-weight:600; color: rgba(var(--color-2), 0.6);" for="filter-role">Tipo:</label>
+                        <select id="filter-role" style="padding: 6px 12px; border-radius: 8px; border: 1.5px solid rgba(var(--color-2), 0.15); font-size: 0.85rem; background-color: rgb(var(--color-7)); outline: none;">
+                            <option value="">Todos</option>
+                            <option value="voluntario">Voluntário</option>
+                            <option value="doador">Doador</option>
+                            <option value="os dois">Os dois</option>
+                        </select>
+                    </div>
+                </section>
+
+                <!-- TABELA COMPLETA -->
+                <section class="table-card" aria-labelledby="vol-table-title">
+                    <div class="table-card-header">
+                        <span class="table-card-title" id="vol-table-title">Todos os voluntários</span>
+                        <span style="font-size:0.8rem; color: rgba(var(--color-2), 0.45);">8 registros</span>
+                    </div>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Nome</th>
+                                    <th scope="col">E-mail</th>
+                                    <th scope="col">Telefone</th>
+                                    <th scope="col">Cidade</th>
+                                    <th scope="col">Como ajuda</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Maria da Silva</td>
+                                    <td>maria@email.com</td>
+                                    <td>(11) 99999-0001</td>
+                                    <td>São Paulo — SP</td>
+                                    <td>Os dois</td>
+                                    <td><span class="badge badge-active">Ativo</span></td>
+                                    <td><div class="table-actions">
+                                        <a href="#" class="table-action-btn view" title="Ver"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></a>
+                                        <a href="#" class="table-action-btn edit" title="Editar"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></a>
+                                        <a href="#" class="table-action-btn delete" title="Remover"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg></a>
+                                    </div></td>
+                                </tr>
+                                <tr>
+                                    <td>João Pereira</td>
+                                    <td>joao.p@email.com</td>
+                                    <td>(11) 99999-0002</td>
+                                    <td>Campinas — SP</td>
+                                    <td>Voluntário</td>
+                                    <td><span class="badge badge-pending">Pendente</span></td>
+                                    <td><div class="table-actions">
+                                        <a href="#" class="table-action-btn view" title="Ver"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></a>
+                                        <a href="#" class="table-action-btn edit" title="Editar"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></a>
+                                        <a href="#" class="table-action-btn delete" title="Remover"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg></a>
+                                    </div></td>
+                                </tr>
+                                <tr>
+                                    <td>Ana Souza</td>
+                                    <td>ana.souza@email.com</td>
+                                    <td>(11) 99999-0003</td>
+                                    <td>Guarulhos — SP</td>
+                                    <td>Os dois</td>
+                                    <td><span class="badge badge-active">Ativo</span></td>
+                                    <td><div class="table-actions">
+                                        <a href="#" class="table-action-btn view" title="Ver"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></a>
+                                        <a href="#" class="table-action-btn edit" title="Editar"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></a>
+                                        <a href="#" class="table-action-btn delete" title="Remover"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg></a>
+                                    </div></td>
+                                </tr>
+                                <tr>
+                                    <td>Carlos Lima</td>
+                                    <td>carlos.l@email.com</td>
+                                    <td>(11) 99999-0004</td>
+                                    <td>São Paulo — SP</td>
+                                    <td>Doador</td>
+                                    <td><span class="badge badge-inactive">Inativo</span></td>
+                                    <td><div class="table-actions">
+                                        <a href="#" class="table-action-btn view" title="Ver"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></a>
+                                        <a href="#" class="table-action-btn edit" title="Editar"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></a>
+                                        <a href="#" class="table-action-btn delete" title="Remover"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg></a>
+                                    </div></td>
+                                </tr>
+                                <tr>
+                                    <td>Fernanda Costa</td>
+                                    <td>fe.costa@email.com</td>
+                                    <td>(11) 99999-0005</td>
+                                    <td>Santo André — SP</td>
+                                    <td>Voluntário</td>
+                                    <td><span class="badge badge-active">Ativo</span></td>
+                                    <td><div class="table-actions">
+                                        <a href="#" class="table-action-btn view" title="Ver"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></a>
+                                        <a href="#" class="table-action-btn edit" title="Editar"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></a>
+                                        <a href="#" class="table-action-btn delete" title="Remover"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg></a>
+                                    </div></td>
+                                </tr>
+                                <tr>
+                                    <td>Ricardo Alves</td>
+                                    <td>rica@email.com</td>
+                                    <td>(11) 99999-0006</td>
+                                    <td>Osasco — SP</td>
+                                    <td>Os dois</td>
+                                    <td><span class="badge badge-pending">Pendente</span></td>
+                                    <td><div class="table-actions">
+                                        <a href="#" class="table-action-btn view" title="Ver"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></a>
+                                        <a href="#" class="table-action-btn edit" title="Editar"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></a>
+                                        <a href="#" class="table-action-btn delete" title="Remover"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg></a>
+                                    </div></td>
+                                </tr>
+                                <tr>
+                                    <td>Patrícia Nunes</td>
+                                    <td>pati.n@email.com</td>
+                                    <td>(11) 99999-0007</td>
+                                    <td>Mauá — SP</td>
+                                    <td>Doador</td>
+                                    <td><span class="badge badge-active">Ativo</span></td>
+                                    <td><div class="table-actions">
+                                        <a href="#" class="table-action-btn view" title="Ver"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></a>
+                                        <a href="#" class="table-action-btn edit" title="Editar"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></a>
+                                        <a href="#" class="table-action-btn delete" title="Remover"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg></a>
+                                    </div></td>
+                                </tr>
+                                <tr>
+                                    <td>Luís Martins</td>
+                                    <td>luis.m@email.com</td>
+                                    <td>(11) 99999-0008</td>
+                                    <td>São Bernardo — SP</td>
+                                    <td>Voluntário</td>
+                                    <td><span class="badge badge-pending">Pendente</span></td>
+                                    <td><div class="table-actions">
+                                        <a href="#" class="table-action-btn view" title="Ver"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></a>
+                                        <a href="#" class="table-action-btn edit" title="Editar"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></a>
+                                        <a href="#" class="table-action-btn delete" title="Remover"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg></a>
+                                    </div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+
+        <footer id="footer-panel">
+            <span>&copy; 2026 Instituto Raiz Viva</span>
+            <a href="index.html">Voltar ao site</a>
+        </footer>
+
+    </div><!-- #content -->
+</div><!-- #panel -->
+
+<script src="/js/panel.js"></script>
+</body>
+</html>
