@@ -1,49 +1,35 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raiz viva - Projetos</title>
+    <title>Raiz Viva — Projetos</title>
     <link rel="stylesheet" href="/css/carrousel.lib.css">
     <link rel="stylesheet" href="/css/style.css">
     <script src="/js/carrousel.lib.js"></script>
 </head>
 <body>
-    <!--
-        =======================================
-        HEADER
-        =======================================
-    -->
+
+    <!-- ==============================
+         HEADER
+         ============================== -->
     <header id="header-page">
         <div class="container">
             <nav id="container-navigation">
-
                 <a aria-label="Voltar ao início" class="logo" href="index.html">
-                    <img src="/imgs/logo.svg" width="40" height="40" alt="" />
+                    <img src="/imgs/logo.svg" width="40" height="40" alt="Logo Raiz Viva"/>
                 </a>
                 <ul id="navigation-desktop">
-                    <li>
-                        <a class="desk_nav-link" href="index.html">Início</a>
-                    </li>
-                    <li>
-                        <a class="desk_nav-link active" href="projetos.html">Projetos</a>
-                    </li>
-                    <li>
-                        <a class="desk_nav-link" href="cadastro.html">Cadastro</a>
-                    </li>
+                    <li><a class="desk_nav-link" href="index.html">Início</a></li>
+                    <li><a class="desk_nav-link active" href="projetos.html">Projetos</a></li>
+                    <li><a class="desk_nav-link" href="cadastro.html">Cadastro</a></li>
                 </ul>
                 <ul id="navigation-mobile">
-                    <li>
-                        <a class="mob_nav-link" href="index.html">Início</a>
-                    </li>
-                    <li>
-                        <a class="mob_nav-link active" href="projetos.html">Projetos</a>
-                    </li>
-                    <li>
-                        <a class="mob_nav-link" href="cadastro.html">Cadastro</a>
-                    </li>
+                    <li><a class="mob_nav-link" href="index.html">Início</a></li>
+                    <li><a class="mob_nav-link active" href="projetos.html">Projetos</a></li>
+                    <li><a class="mob_nav-link" href="cadastro.html">Cadastro</a></li>
                 </ul>
-                <button type="button" id="toggle-menu">
+                <button type="button" id="toggle-menu" aria-label="Abrir menu">
                     <span class="toggle-line"></span>
                     <span class="toggle-line"></span>
                     <span class="toggle-line"></span>
@@ -52,101 +38,177 @@
         </div>
     </header>
 
-    <!--
-        =======================================
-        MAIN
-        =======================================
-    -->
     <main>
-        <section class="main_section" id="hero">
-            <img src="/imgs/image_3.jpg" height="500" alt="">
+
+        <!-- ==============================
+             HERO
+             ============================== -->
+        <section class="main_section" id="hero" aria-label="Capa da página de projetos">
+            <img src="/imgs/image_3.jpg" height="420" alt="Voluntários trabalhando em área verde">
             <div class="overlay">
                 <div class="container">
-                    <h1 class="title-page">Projetos sociais</h1>
+                    <h1 class="title-page">Nossos Projetos</h1>
                     <p>Três frentes de trabalho, todas abertas a voluntários e doadores.</p>
                 </div>
             </div>
         </section>
 
-        <section class="main_section_bottom">
+        <!-- ==============================
+             PROJETOS — CARDS VISUAIS
+             ============================== -->
+        <section class="main_section_bottom bg-light" aria-labelledby="projects-title">
             <div class="container">
+                <h2 class="main_section_title" id="projects-title">O que fazemos</h2>
                 <div class="box-grid">
-                    <div class="info_box">
-                        <h3 class="info_box_title">Horta viva</h3>
-                        <p class="inf_box_dec">
-                            Terrenos ociosos viram hortas. Os moradores plantam, colhem e dividem a produção.
-                        </p>
-                    </div>
-                    <div class="info_box">
-                        <h3 class="info_box_title">Reforço na Praça</h3>
-                        <p class="inf_box_dec">
-                            Aulas de leitura e matemática para crianças do 1º ao 5º ano, com lanche incluído.
-                        </p>
-                    </div>
-                    <div class="info_box">
-                        <h3 class="info_box_title">Cesta Solidária</h3>
-                        <p class="inf_box_dec">
-                            Entrega semanal de alimentos para 300 famílias em situação de vulnerabilidade.
-                        </p>
-                    </div>
+
+                    <article class="project-card" aria-labelledby="project-horta">
+                        <div class="card-icon"></div>
+                        <div class="card-body">
+                            <span class="card-emoji" aria-hidden="true">🌱</span>
+                            <h3 class="card-title" id="project-horta">Horta Viva</h3>
+                            <p class="card-desc">
+                                Terrenos ociosos são transformados em hortas comunitárias.
+                                Os moradores plantam, colhem e dividem a produção fresca a cada semana.
+                                O projeto já ativou 8 terrenos no bairro.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project-card accent-yellow" aria-labelledby="project-reforco">
+                        <div class="card-icon"></div>
+                        <div class="card-body">
+                            <span class="card-emoji" aria-hidden="true">📚</span>
+                            <h3 class="card-title" id="project-reforco">Reforço na Praça</h3>
+                            <p class="card-desc">
+                                Aulas de leitura e matemática para crianças do 1º ao 5º ano,
+                                três tardes por semana. Com lanche incluído e monitores voluntários
+                                treinados pela equipe pedagógica.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project-card accent-navy" aria-labelledby="project-cesta">
+                        <div class="card-icon"></div>
+                        <div class="card-body">
+                            <span class="card-emoji" aria-hidden="true">🧺</span>
+                            <h3 class="card-title" id="project-cesta">Cesta Solidária</h3>
+                            <p class="card-desc">
+                                Entrega semanal de alimentos para 300 famílias em situação de
+                                vulnerabilidade. As cestas são montadas por voluntários às sextas
+                                e distribuídas no fim de semana.
+                            </p>
+                        </div>
+                    </article>
+
                 </div>
             </div>
         </section>
 
-        <section class="main_section_bottom voluntary_section">
+        <!-- ==============================
+             SEJA VOLUNTÁRIO
+             ============================== -->
+        <section class="main_section_bottom voluntary_section" aria-labelledby="voluntary-title">
             <div class="container">
-                <h2 class="main_section_title">Seja voluntário</h2>
+                <h2 class="main_section_title" id="voluntary-title">Seja voluntário</h2>
                 <div class="voluntary">
-                    <p>Você escolhe o dia e o projeto. Basta ter 18 anos ou mais e disponibilidade de 4 horas por mês.</p>
-
+                    <p>
+                        Você escolhe o dia e o projeto. Basta ter 18 anos ou mais e
+                        disponibilidade de pelo menos 4 horas por mês.
+                    </p>
                     <ul>
-                        <li>Plantio e colheita: sábados, das 8h às 11h</li>
-                        <li>Reforço escolar: terças e quintas, das 14h às 17h</li>
-                        <li>Montagem de cestas: sextas, das 9h às 12h</li>
+                        <li>🌿 Plantio e colheita: <strong>sábados, das 8h às 11h</strong></li>
+                        <li>📖 Reforço escolar: <strong>terças e quintas, das 14h às 17h</strong></li>
+                        <li>📦 Montagem de cestas: <strong>sextas, das 9h às 12h</strong></li>
                     </ul>
                     <a class="btn btn-warning" href="cadastro.html">Cadastrar como voluntário</a>
                 </div>
             </div>
         </section>
 
-        <section class="main_section_bottom">
+        <!-- ==============================
+             COMO DOAR
+             ============================== -->
+        <section class="main_section_bottom bg-light" aria-labelledby="donate-title">
             <div class="container">
-                <h2 class="main_section_title">Como doar</h2>
+                <h2 class="main_section_title" id="donate-title">Como doar</h2>
                 <div class="box-grid">
                     <div class="info_box">
-                        <h3 class="info_box_title">PIX</h3>
+                        <span class="info_box_q">PIX</span>
+                        <h3 class="info_box_title">Chave PIX</h3>
                         <p class="inf_box_dec">
-                            Chave (CNPJ): 00.000.000/0001-00
+                            CNPJ: <strong>00.000.000/0001-00</strong><br>
+                            Transferência instantânea, qualquer valor.
                         </p>
                     </div>
                     <div class="info_box">
+                        <span class="info_box_q">🏦</span>
                         <h3 class="info_box_title">Transferência</h3>
                         <p class="inf_box_dec">
-                            Banco 000 · Ag. 0000 · Conta 00000-0 Instituto Raiz Viva
+                            Banco 000 · Ag. 0000 · Conta 00000-0<br>
+                            Instituto Raiz Viva
                         </p>
                     </div>
                     <div class="info_box">
+                        <span class="info_box_q">📦</span>
                         <h3 class="info_box_title">Alimentos e materiais</h3>
                         <p class="inf_box_dec">
-                            Entregue na sede, de segunda a sexta, das 9h às 17h. Aceitamos alimentos não perecíveis e material escolar.
+                            Entregue na sede, de segunda a sexta, das 9h às 17h.
+                            Aceitamos alimentos não perecíveis e material escolar.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- ==============================
+             CTA
+             ============================== -->
+        <section class="cta-banner" aria-labelledby="cta-title">
+            <div class="container">
+                <h2 id="cta-title">Pronto para fazer a diferença?</h2>
+                <p>Preencha o cadastro e nossa equipe entrará em contato em até 2 dias úteis.</p>
+                <div class="cta-actions">
+                    <a class="btn btn-warning" href="cadastro.html">Fazer cadastro</a>
+                </div>
+            </div>
+        </section>
+
     </main>
-    <!--
-        =======================================
-        FOOTER
-        =======================================
-    -->
+
+    <!-- ==============================
+         FOOTER
+         ============================== -->
     <footer class="site-footer">
         <div class="container">
-            <h3>Instituto Raiz Viva</h3>
-            <p>Rua das Acácias, 120 – Paulista, SP, 01000-000</p>
-            <p><a href="">contato@raizviva.org.br</a> &bull; <a href="">(11) 4000-0000</a></p>
-            <p>&copy; 2026 Instituto Raiz Viva. CNPJ 00.000.000/0001-00.</p>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Instituto Raiz Viva</h3>
+                    <p>Rua das Acácias, 120 – Paulista, SP, 01000-000</p>
+                    <p>
+                        <a href="mailto:contato@raizviva.org.br">contato@raizviva.org.br</a><br>
+                        <a href="tel:+551140000000">(11) 4000-0000</a>
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <h4>Páginas</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
+                        <li><a href="cadastro.html">Cadastro</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Projetos</h4>
+                    <ul>
+                        <li><a href="projetos.html">Horta Viva</a></li>
+                        <li><a href="projetos.html">Reforço na Praça</a></li>
+                        <li><a href="projetos.html">Cesta Solidária</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Instituto Raiz Viva. CNPJ 00.000.000/0001-00.
+            </div>
         </div>
     </footer>
 

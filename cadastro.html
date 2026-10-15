@@ -1,54 +1,35 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raiz viva - Cadastro</title>
+    <title>Raiz Viva — Cadastro</title>
     <link rel="stylesheet" href="/css/carrousel.lib.css">
     <link rel="stylesheet" href="/css/style.css">
     <script src="/js/carrousel.lib.js"></script>
 </head>
 <body>
-    <!--
-        =======================================
-        HEADER
-        =======================================
-    -->
+
+    <!-- ==============================
+         HEADER
+         ============================== -->
     <header id="header-page">
         <div class="container">
             <nav id="container-navigation">
-
                 <a aria-label="Voltar ao início" class="logo" href="index.html">
-                    <img
-                        src="/imgs/logo.svg"
-                        width="40"
-                        height="40"
-                        alt=""
-                    />
+                    <img src="/imgs/logo.svg" width="40" height="40" alt="Logo Raiz Viva"/>
                 </a>
                 <ul id="navigation-desktop">
-                    <li>
-                        <a class="desk_nav-link" href="index.html">Início</a>
-                    </li>
-                    <li>
-                        <a class="desk_nav-link" href="projetos.html">Projetos</a>
-                    </li>
-                    <li>
-                        <a class="desk_nav-link active" href="cadastro.html">Cadastro</a>
-                    </li>
+                    <li><a class="desk_nav-link" href="index.html">Início</a></li>
+                    <li><a class="desk_nav-link" href="projetos.html">Projetos</a></li>
+                    <li><a class="desk_nav-link active" href="cadastro.html">Cadastro</a></li>
                 </ul>
                 <ul id="navigation-mobile">
-                    <li>
-                        <a class="mob_nav-link" href="index.html">Início</a>
-                    </li>
-                    <li>
-                        <a class="mob_nav-link" href="projetos.html">Projetos</a>
-                    </li>
-                    <li>
-                        <a class="mob_nav-link active" href="cadastro.html">Cadastro</a>
-                    </li>
+                    <li><a class="mob_nav-link" href="index.html">Início</a></li>
+                    <li><a class="mob_nav-link" href="projetos.html">Projetos</a></li>
+                    <li><a class="mob_nav-link active" href="cadastro.html">Cadastro</a></li>
                 </ul>
-                <button type="button" id="toggle-menu">
+                <button type="button" id="toggle-menu" aria-label="Abrir menu">
                     <span class="toggle-line"></span>
                     <span class="toggle-line"></span>
                     <span class="toggle-line"></span>
@@ -57,205 +38,235 @@
         </div>
     </header>
 
-    <!--
-        =======================================
-        MAIN
-        =======================================
-    -->
     <main>
 
-        <section class="main_section" id="hero">
-            <img src="/imgs/image_2.jpeg" height="500" alt="">
+        <!-- ==============================
+             HERO
+             ============================== -->
+        <section class="main_section" id="hero" aria-label="Capa da página de cadastro">
+            <img src="/imgs/image_2.jpeg" height="420" alt="Voluntários em ação no projeto">
             <div class="overlay">
                 <div class="container">
                     <h1 class="title-page">Cadastro</h1>
-                    <p>Preencha os dados abaixo. Campos com * são obrigatórios.</p>
+                    <p>Preencha os dados abaixo para fazer parte da Raiz Viva.<br>Campos com * são obrigatórios.</p>
                 </div>
             </div>
         </section>
 
-        <div class="main_section_bottom">
+        <!-- ==============================
+             FORMULÁRIO
+             ============================== -->
+        <section class="main_section_bottom bg-light" aria-labelledby="form-section-title">
             <div class="container">
-                <form id="form-register">
+                <h2 class="main_section_title" id="form-section-title">Seus dados</h2>
+
+                <form id="form-register" novalidate>
+
+                    <!-- DADOS PESSOAIS -->
                     <fieldset>
-                        <legend>Dados pessoais</legend>
+                        <legend>🙂 Dados pessoais</legend>
 
                         <div class="form-wrapper">
-                            <label for="full_name">Nome completo*</label>
+                            <label for="full_name">Nome completo *</label>
                             <input
                                 type="text"
                                 name="full_name"
                                 id="full_name"
-                                placeholder="John Doe"
+                                placeholder="Ex: Maria da Silva"
+                                autocomplete="name"
                                 required
                             />
                         </div>
 
                         <div class="form-wrapper">
-                            <label for="email">E-mail*</label>
+                            <label for="email">E-mail *</label>
                             <input
                                 type="email"
                                 name="email"
                                 id="email"
-                                placeholder="exemple@email.com"
+                                placeholder="Ex: maria@email.com"
+                                autocomplete="email"
                                 required
                             />
                         </div>
 
                         <div class="form-wrapper-grid">
                             <div class="form-wrapper">
-                                <label for="cpf">CPF*</label>
+                                <label for="cpf">CPF *</label>
                                 <input
                                     type="text"
                                     name="cpf"
                                     id="cpf"
                                     placeholder="000.000.000-00"
-                                    pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}"
+                                    pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}"
                                     maxlength="14"
+                                    inputmode="numeric"
                                     required
                                 />
                             </div>
-
                             <div class="form-wrapper">
-                                <label for="phone_number">Telefone*</label>
+                                <label for="phone_number">Telefone *</label>
                                 <input
                                     type="tel"
                                     name="phone_number"
                                     id="phone_number"
                                     placeholder="(00) 00000-0000"
                                     maxlength="15"
+                                    inputmode="tel"
+                                    autocomplete="tel"
                                     required
                                 />
                             </div>
                         </div>
 
                         <div class="form-wrapper">
-                            <label for="birthday">Data de nascimento*</label>
+                            <label for="birthday">Data de nascimento *</label>
                             <input
                                 type="date"
                                 name="birthday"
                                 id="birthday"
+                                autocomplete="bday"
                                 required
                             />
                         </div>
                     </fieldset>
 
+                    <!-- ENDEREÇO -->
                     <fieldset>
-                        <legend>Endereço</legend>
-
-                        <div class="form-wrapper">
-                            <label for="cep">CEP*</label>
-                            <input
-                                type="text"
-                                name="cep"
-                                id="cep"
-                                placeholder="00000-000"
-                                pattern="[0-9]{5}-[0-9]{3}"
-                                maxlength="9"
-                                required
-                            />
-                        </div>
-
-                        <div class="form-wrapper">
-                            <label for="address">Endereço*</label>
-                            <input
-                                type="text"
-                                name="address"
-                                id="address"
-                                required
-                            />
-                        </div>
+                        <legend>📍 Endereço</legend>
 
                         <div class="form-wrapper-grid">
                             <div class="form-wrapper">
-                                <label for="city">Cidade*</label>
+                                <label for="cep">CEP *</label>
+                                <input
+                                    type="text"
+                                    name="cep"
+                                    id="cep"
+                                    placeholder="00000-000"
+                                    pattern="[0-9]{5}-[0-9]{3}"
+                                    maxlength="9"
+                                    inputmode="numeric"
+                                    required
+                                />
+                            </div>
+                            <div class="form-wrapper">
+                                <!-- espaço para city vir junto depois do CEP autocompletar -->
+                                <label for="city">Cidade *</label>
                                 <input
                                     type="text"
                                     name="city"
                                     id="city"
+                                    autocomplete="address-level2"
                                     required
                                 />
                             </div>
+                        </div>
 
-                            <div class="form-wrapper">
-                                <label for="provincy">Estado*</label>
-                                <select name="provincy" id="provincy" required>
-                                    <option value="">Selecione uma opção</option>
-                                </select>
-                            </div>
+                        <div class="form-wrapper">
+                            <label for="address">Endereço *</label>
+                            <input
+                                type="text"
+                                name="address"
+                                id="address"
+                                placeholder="Rua, número, complemento"
+                                autocomplete="street-address"
+                                required
+                            />
+                        </div>
+
+                        <div class="form-wrapper">
+                            <label for="provincy">Estado *</label>
+                            <select name="provincy" id="provincy" autocomplete="address-level1" required>
+                                <option value="">Selecione um estado</option>
+                            </select>
                         </div>
                     </fieldset>
 
+                    <!-- COMO QUER AJUDAR -->
                     <fieldset>
-                        <legend>Como quer ajudar</legend>
+                        <legend>💚 Como quer ajudar</legend>
 
-                        <ul class="form-wrapper-list">
+                        <ul class="form-wrapper-list" role="radiogroup" aria-label="Forma de participação">
                             <li>
                                 <label>
-                                    <input
-                                        type="radio"
-                                        name="help-option"
-                                        value="voluntario"
-                                    />
-                                    Quero ser voluntário
+                                    <input type="radio" name="help-option" value="voluntario"/>
+                                    🙋 Quero ser voluntário
                                 </label>
                             </li>
                             <li>
                                 <label>
-                                    <input
-                                        type="radio"
-                                        name="help-option"
-                                        value="doador"
-                                    >
-                                    Quero ser doador
+                                    <input type="radio" name="help-option" value="doador"/>
+                                    💰 Quero ser doador
                                 </label>
                             </li>
                             <li>
                                 <label>
-                                    <input
-                                        type="radio"
-                                        name="help-option"
-                                        value="os dois"
-                                        checked
-                                    >
-                                    Os dois
+                                    <input type="radio" name="help-option" value="os dois" checked/>
+                                    🤝 Os dois
                                 </label>
                             </li>
                         </ul>
 
-                        <div class="form-wrapper">
-                            <label>
-                                <input 
+                        <div class="form-wrapper" style="margin-top: 1.5rem;">
+                            <label class="checkbox-label">
+                                <input
                                     required
                                     type="checkbox"
                                     name="check"
                                     id="check"
                                     value="concordo"
                                 />
-                                Concordo com o uso dos meus dados para contato da ONG, conforme a LGPD. *
+                                <span>
+                                    Concordo com o uso dos meus dados para contato da ONG,
+                                    conforme a <abbr title="Lei Geral de Proteção de Dados">LGPD</abbr>. *
+                                </span>
                             </label>
                         </div>
                     </fieldset>
 
                     <button type="submit" class="btn btn-warning" disabled>
-                        Enviar Cadastro
+                        Enviar Cadastro →
                     </button>
                 </form>
             </div>
-        </div>
+        </section>
 
     </main>
-    <!--
-        =======================================
-        FOOTER
-        =======================================
-    -->
+
+    <!-- ==============================
+         FOOTER
+         ============================== -->
     <footer class="site-footer">
         <div class="container">
-            <h2>Instituto Raiz Viva</h2>
-            <p>Rua das Acácias, 120 – Paulista, SP, 01000-000</p>
-            <p><a href="">contato@raizviva.org.br</a> &bull; <a href="">(11) 4000-0000</a></p>
-            <p>&copy; 2026 Instituto Raiz Viva. CNPJ 00.000.000/0001-00.</p>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Instituto Raiz Viva</h3>
+                    <p>Rua das Acácias, 120 – Paulista, SP, 01000-000</p>
+                    <p>
+                        <a href="mailto:contato@raizviva.org.br">contato@raizviva.org.br</a><br>
+                        <a href="tel:+551140000000">(11) 4000-0000</a>
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <h4>Páginas</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
+                        <li><a href="cadastro.html">Cadastro</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Projetos</h4>
+                    <ul>
+                        <li><a href="projetos.html">Horta Viva</a></li>
+                        <li><a href="projetos.html">Reforço na Praça</a></li>
+                        <li><a href="projetos.html">Cesta Solidária</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Instituto Raiz Viva. CNPJ 00.000.000/0001-00.
+            </div>
         </div>
     </footer>
 
